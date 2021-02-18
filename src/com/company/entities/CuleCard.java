@@ -1,14 +1,20 @@
 package com.company.entities;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class CuleCard {
+
     private int id;
+
     private String name;
 
-    public CuleCard(int id, String name) {
+    private LocalDate activeTo;
+
+    public CuleCard(int id, String name, LocalDate activeTo) {
         this.id = id;
         this.name = name;
+        this.activeTo = activeTo;
     }
 
     public int getId() {
@@ -27,24 +33,36 @@ public class CuleCard {
         this.name = name;
     }
 
+    public LocalDate getActiveTo() {
+        return activeTo;
+    }
+
+    public void setActiveTo(LocalDate activeTo) {
+        this.activeTo = activeTo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CuleCard culeCard = (CuleCard) o;
-        return id == culeCard.id && Objects.equals(name, culeCard.name);
+        return id == culeCard.id &&
+                Objects.equals(name, culeCard.name) &&
+                Objects.equals(activeTo, culeCard.activeTo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id, name, activeTo);
     }
+
 
     @Override
     public String toString() {
         return "CuleCard{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", activeTo=" + activeTo +
                 '}';
     }
 }
