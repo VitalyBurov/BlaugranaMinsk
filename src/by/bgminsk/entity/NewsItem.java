@@ -1,9 +1,16 @@
 package by.bgminsk.entity;
 
-import java.time.LocalDate;
-import java.util.Locale;
-import java.util.Objects;
+import lombok.*;
 
+import java.time.LocalDate;
+
+
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class NewsItem {
     private int id;
     private String title;
@@ -11,7 +18,7 @@ public class NewsItem {
     private String author;
     private LocalDate dateOfPublic;
 
-    public NewsItem(int id, String title, String content, String author, LocalDate dateOfPublic) {
+   /* public NewsItem(int id, String title, String content, String author, LocalDate dateOfPublic) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -70,6 +77,6 @@ public class NewsItem {
     @Override
     public int hashCode() {
         return Objects.hash(id, title, content, author, dateOfPublic);
-    }
+    }*/
 }
 

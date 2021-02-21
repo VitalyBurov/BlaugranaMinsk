@@ -1,8 +1,15 @@
 package by.bgminsk.entity;
 
-import java.time.LocalDate;
-import java.util.Objects;
+import lombok.*;
 
+import java.time.LocalDate;
+
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Event {
     private int id;
     private String name;
@@ -11,7 +18,7 @@ public class Event {
     private String author;
     private LocalDate dateOfPublic;
 
-    public int getId() {
+ /*   public int getId() {
         return id;
     }
 
@@ -79,5 +86,5 @@ public class Event {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, palace, description, author, dateOfPublic);
-    }
+    }*/
 }

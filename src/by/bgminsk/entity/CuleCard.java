@@ -1,8 +1,15 @@
 package by.bgminsk.entity;
 
-import java.time.LocalDate;
-import java.util.Objects;
+import lombok.*;
 
+import java.time.LocalDate;
+
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class CuleCard {
 
     private int id;
@@ -11,7 +18,7 @@ public class CuleCard {
 
     private LocalDate activeTo;
 
-    public CuleCard(int id, String name, LocalDate activeTo) {
+ /*   public CuleCard(int id, String name, LocalDate activeTo) {
         this.id = id;
         this.name = name;
         this.activeTo = activeTo;
@@ -64,5 +71,5 @@ public class CuleCard {
                 ", name='" + name + '\'' +
                 ", activeTo=" + activeTo +
                 '}';
-    }
+    }*/
 }

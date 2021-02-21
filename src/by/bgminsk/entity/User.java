@@ -1,7 +1,13 @@
 package by.bgminsk.entity;
 
-import java.util.Objects;
+import lombok.*;
 
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     private int id;
     private String name;
@@ -9,7 +15,7 @@ public class User {
     private String position;
     private String password;
 
-    public User(int id, String name, byte age, String position, String password) {
+   /* public User(int id, String name, byte age, String position, String password) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -77,6 +83,6 @@ public class User {
                 ", position='" + position + '\'' +
                 ", password='" + password + '\'' +
                 '}';
-    }
+    }*/
 }
 
