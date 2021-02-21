@@ -1,4 +1,4 @@
-package com.company.entities;
+package by.bgminsk.entity;
 
 import java.time.LocalDate;
 import java.util.Objects;

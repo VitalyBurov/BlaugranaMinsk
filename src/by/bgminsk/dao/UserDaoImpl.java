@@ -1,6 +1,6 @@
-package com.company.DAO;
+package by.bgminsk.dao;
 
-import com.company.entities.User;
+import by.bgminsk.entity.User;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

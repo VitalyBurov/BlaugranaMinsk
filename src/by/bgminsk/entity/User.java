@@ -1,4 +1,4 @@
-package com.company.entities;
+package by.bgminsk.entity;
 
 import java.util.Objects;
 
