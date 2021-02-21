@@ -7,12 +7,14 @@ public class User {
     private String name;
     private byte age;
     private String position;
+    private String password;
 
-    public User(int id, String name, byte age, String position) {
+    public User(int id, String name, byte age, String position, String password) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.position = position;
+        this.password = password;
     }
 
     public int getId() {
@@ -47,26 +49,34 @@ public class User {
         this.position = position;
     }
 
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && age == user.age && Objects.equals(name, user.name) && Objects.equals(position, user.position);
+        return id == user.id && age == user.age && Objects.equals(name, user.name) && Objects.equals(position, user.position) && Objects.equals(password, user.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, age, position);
+        return Objects.hash(id, name, age, position, password);
     }
 
     @Override
     public String toString() {
-        return "Users{" +
+        return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", position='" + position + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
+
