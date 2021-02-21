@@ -1,5 +1,6 @@
 package by.bgminsk.entity;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Event {
@@ -8,6 +9,7 @@ public class Event {
     private String palace;
     private String description;
     private String author;
+    private LocalDate dateOfPublic;
 
     public int getId() {
         return id;
@@ -49,12 +51,21 @@ public class Event {
         this.author = author;
     }
 
-    public Event(int id, String name, String palace, String description, String author) {
+    public LocalDate getDateOfPublic() {
+        return dateOfPublic;
+    }
+
+    public void setDateOfPublic(LocalDate dateOfPublic) {
+        this.dateOfPublic = dateOfPublic;
+    }
+
+    public Event(int id, String name, String palace, String description, String author, LocalDate dateOfPublic) {
         this.id = id;
         this.name = name;
         this.palace = palace;
         this.description = description;
         this.author = author;
+        this.dateOfPublic = dateOfPublic;
     }
 
     @Override
@@ -67,17 +78,6 @@ public class Event {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, palace, description, author);
-    }
-
-    @Override
-    public String toString() {
-        return "Event{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", palace='" + palace + '\'' +
-                ", description='" + description + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+        return Objects.hash(id, name, palace, description, author, dateOfPublic);
     }
 }

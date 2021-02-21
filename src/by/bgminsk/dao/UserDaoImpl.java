@@ -1,6 +1,7 @@
 package by.bgminsk.dao;
 
 import by.bgminsk.entity.User;
+import connection.ConnectionManager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,8 +14,7 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public void save(User user) {
-        try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "burik2310");
+        try { Connection connection = ConnectionManager.newConnection();
             PreparedStatement statement = connection.prepareStatement(SAVE_USER_QUERY);
 
             statement.setInt(1, user.getId());
