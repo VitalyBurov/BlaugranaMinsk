@@ -1,8 +1,8 @@
-package com.company.entities;
+package by.bgminsk.entity;
 
 import java.util.Objects;
 
-public class Events {
+public class Event {
     private int id;
     private String name;
     private String palace;
@@ -49,7 +49,7 @@ public class Events {
         this.author = author;
     }
 
-    public Events(int id, String name, String palace, String description, String author) {
+    public Event(int id, String name, String palace, String description, String author) {
         this.id = id;
         this.name = name;
         this.palace = palace;
@@ -61,8 +61,8 @@ public class Events {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Events events = (Events) o;
-        return id == events.id && Objects.equals(name, events.name) && Objects.equals(palace, events.palace) && Objects.equals(description, events.description) && Objects.equals(author, events.author);
+        Event event = (Event) o;
+        return id == event.id && Objects.equals(name, event.name) && Objects.equals(palace, event.palace) && Objects.equals(description, event.description) && Objects.equals(author, event.author);
     }
 
     @Override
@@ -72,7 +72,7 @@ public class Events {
 
     @Override
     public String toString() {
-        return "Events{" +
+        return "Event{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", palace='" + palace + '\'' +
